@@ -14,5 +14,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
           local_path: './*'
-          remote_path: '/home/users/clienteteste/'
+          remote_path: '/clienteteste'
           args: '-o ConnectTimeout=5'
