@@ -9,5 +9,6 @@
 <body>
     <h3>Teste GitHub - SFTP Deploy</h3>
     <p>Adicionei do lado do servidor uma pasta, será que vai funcionar ?</p>
+    <a href="summary/summary.php">Home Summary</a>
 </body>
 </html>
