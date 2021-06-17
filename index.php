@@ -13,7 +13,9 @@
 
     <?php
 
-        $url = explode("/", ($_GET['url'])?$_GET['url']:'');
+        $url = (!isset($_GET['url']))?"summary":$_GET['url'];
+
+        $url = explode("/", $url);
 
         var_dump($url);
     ?>
