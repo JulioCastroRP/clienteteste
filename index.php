@@ -17,7 +17,7 @@
 
             $url = explode("/", $url);
 
-            if(file_exists($url[0] ."/". $row[0] .".php")){
+            if(file_exists($url[0] ."/". $url[0] .".php")){
                 include_once $url[0]."/".$url[0].".php";
             }
         ?>
