@@ -9,15 +9,18 @@
 <body>
     <h3>Teste GitHub - SFTP Deploy</h3>
     <p>Adicionei do lado do servidor uma pasta, será que vai funcionar ?</p>
-    <a href="summary/summary.php">Home Summary</a>
+    <a href="summary">Home Summary</a>
+    <div id="content">
+        <?php
 
-    <?php
+            $url = (!isset($_GET['url']))?"summary":$_GET['url'];
 
-        $url = (!isset($_GET['url']))?"summary":$_GET['url'];
+            $url = explode("/", $url);
 
-        $url = explode("/", $url);
-
-        var_dump($url);
-    ?>
+            if(file_exists($url[0] ."/". $row[0] .".php")){
+                include_once $url[0]."/".$url[0].".php";
+            }
+        ?>
+    </div>
 </body>
 </html>
