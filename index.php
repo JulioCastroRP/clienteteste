@@ -15,10 +15,8 @@
 
             $url = explode("/", ((!isset($_GET['url']))?"summary":$_GET['url']));
 
-            var_dump($url);
-
-            if(file_exists($url[0] ."/". $url[0] .".php")){
-                include_once $url[0]."/".$url[0].".php";
+            if(file_exists("pages/". $url[0] .".php")){
+                include_once "pages/".$url[0].".php";
             }
         ?>
     </div>
