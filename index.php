@@ -7,16 +7,15 @@
     <title>GitHub</title>
 </head>
 <body>
-    <h3>Teste GitHub - SFTP Deploy</h3>
-    <p>Adicionei do lado do servidor uma pasta, será que vai funcionar ?</p>
-    <a href="summary">Home Summary</a>
+    <a href="home">Home</a>
+    <a href="teste">Teste</a><br>
     <div id="content">
         <?php
 
-            $url = explode("/", ((!isset($_GET['url']))?"summary":$_GET['url']));
+            $rota = explode("/", ((!$_GET['url'])?'home':$_GET['url']));
 
-            if(file_exists("pages/". $url[0] .".php")){
-                include_once "pages/".$url[0].".php";
+            if(file_exists("pages/". $rota[0] .".php")){
+                include "pages/".$rota[0].".php";
             }
         ?>
     </div>
