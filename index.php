@@ -13,7 +13,7 @@
 
     <?php
 
-        $url = explode("/", $_GET['url'] ?? '');
+        $url = explode("/", ($_GET['url'])?$_GET['url']:'');
 
         var_dump($url);
     ?>
