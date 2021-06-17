@@ -13,9 +13,9 @@
     <div id="content">
         <?php
 
-            $url = (!isset($_GET['url']))?"summary":$_GET['url'];
+            $url = explode("/", ((!isset($_GET['url']))?"summary":$_GET['url']));
 
-            $url = explode("/", $url);
+            var_dump($url);
 
             if(file_exists($url[0] ."/". $url[0] .".php")){
                 include_once $url[0]."/".$url[0].".php";
