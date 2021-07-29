@@ -14,8 +14,8 @@
 
             $rota = explode("/", ((!$_GET['url'])?'home':$_GET['url']));
 
-            if(file_exists("pages/". $rota[0] .".php")){
-                include "pages/".$rota[0].".php";
+            if(file_exists($rota[0]."/". $rota[0] .".php")){
+                include $rota[0]."/".$rota[0].".php";
             }else{
                 include "pages/error404.html";
             }
